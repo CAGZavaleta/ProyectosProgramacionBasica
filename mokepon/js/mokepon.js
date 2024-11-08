@@ -51,12 +51,12 @@ class Mokepon {
     }
 }
 
-let hipodoge = new Mokepon('Hipodoge', '/mokepons_mokepon_hipodoge_attack.png', 5)
-let capipepo = new Mokepon('Capipepo', '/mokepons_mokepon_capipepo_attack.png', 5)
-let ratigueya = new Mokepon('Ratigueya', '/mokepons_mokepon_ratigueya_attack.png', 5)
-let langostelvis = new Mokepon('Langostelvis', '/mokepons_mokepon_langostelvis_attack.png', 5)
-let tucapalma = new Mokepon('Tucapalma', '/mokepons_mokepon_tucapalma_attack.png', 5)
-let pydos = new Mokepon('Pydos', '/mokepons_mokepon_pydos_attack.png', 5)
+let hipodoge = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5)
+let capipepo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5)
+let ratigueya = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5)
+let langostelvis = new Mokepon('Langostelvis', './assets/mokepons_mokepon_langostelvis_attack.png', 5)
+let tucapalma = new Mokepon('Tucapalma', './assets/mokepons_mokepon_tucapalma_attack.png', 5)
+let pydos = new Mokepon('Pydos', './assets/mokepons_mokepon_pydos_attack.png', 5)
 
 hipodoge.ataques.push(
     { nombre: '💧', id: 'boton-agua', descripcion: 'Llovisna' },
@@ -182,7 +182,7 @@ function extraerAtaques(mascotaJugador) {
 function mostrarAtaques(ataques) {
     ataques.forEach((ataque) => {
         ataquesMokepon = `
-        <button id=${ataque.id} class="boton-de-ataque BAtaque">${ataque.nombre + ataque.descripcion}</button>
+        <button id=${ataque.id} class="boton-de-ataque BAtaque">${ataque.nombre + ' ' + ataque.descripcion}</button>
         `
         contenedorAtaques.innerHTML += ataquesMokepon
     })
